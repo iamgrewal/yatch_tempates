@@ -4,7 +4,7 @@
   "name": "neo4j",
   "description": "Neo4j is a highly scalable, robust native graph database.",
   "logo": "https://raw.githubusercontent.com/neo4j/docker-neo4j-publish/5.15.0/logo.png",
-  "image": "neo4j:5.15.0",
+  "image": "neo4j:latest",
   "note": "Make sure to adjust the volumes to match your local directories.",
   "categories": [
     "Database"
