@@ -61,24 +61,9 @@
       "default": "neo4j/neo4j"
     },
     {
-      "name": "NEO4J_dbms_memory_heap_initial__size",
-      "label": "DBMS Memory Heap Initial Size",
-      "default": "512m"
-    },
-    {
-      "name": "NEO4J_dbms_memory_heap_max__size",
-      "label": "DBMS Memory Heap Max Size",
-      "default": "2G"
-    },
-    {
       "name": "NEO4J_apoc_uuid_enabled",
       "label": "APOC UUID Enabled",
       "default": "true"
-    },
-    {
-      "name": "NEO4J_dbms_default__listen__address",
-      "label": "DBMS Default Listen Address",
-      "default": "0.0.0.0"
     },
     {
       "name": "NEO4J_dbms_allow__upgrade",
@@ -94,6 +79,21 @@
       "name": "NEO4J_AUTH",
       "label": "Neo4j Authentication",
       "default": "neo4j/test"
-    }
+    }.
+    {
+      "name": "NEO4J_server_memory_heap_initial__size",
+      "label": "Server Memory Heap Initial Size",
+      "default": "512m"
+    },
+        {
+      "name": "NEO4J_server_default__listen__address",
+      "label": "Server Default Listen Address",
+      "default": "0.0.0.0"
+    },
+    {
+      "name": "NEO4J_server_memory_heap_max__size",
+      "label": "Server Memory Heap Max Size",
+      "default": "2G"
+    },
   ]
 }
