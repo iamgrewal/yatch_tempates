@@ -1,0 +1,25 @@
+{
+  "type": "docker-compose",
+  "title": "AppFlowy",
+  "description": "Open-source alternative to Notion - AppFlowy deployment",
+  "categories": ["Productivity", "Note-taking"],
+  "platform": "linux/amd64",
+  "logo": "https://appflowy.io/logo.png",
+  "image": "appflowyio/appflowy_client:main",
+  "restart_policy": "unless-stopped",
+  "ports": ["80:80"],
+  "volumes": [
+    {
+      "container": "/home/appflowy",
+      "bind": "appflowy-data",
+      "readonly": false
+    }
+  ],
+  "environment": [
+    {
+      "name": "DISPLAY",
+      "value": "${DISPLAY}"
+    }
+  ],
+  "documentation": "https://docs.appflowy.io/docs/appflowy/install-appflowy/installation-methods/installing-with-docker"
+}
