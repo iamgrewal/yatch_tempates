@@ -7,7 +7,7 @@
   "logo": "https://appflowy.io/logo.png",
   "image": "appflowyio/appflowy_client:main",
   "restart_policy": "unless-stopped",
-  "ports": ["80:80"],
+  "ports": ["8089:80"],
   "volumes": [
     {
       "container": "/home/appflowy",
