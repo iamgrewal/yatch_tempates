@@ -51,6 +51,16 @@
       "default": "apoc.*,algo.*"
     },
     {
+      "name": "NEO4J_dbms_security_auth__minimum__password__length",
+      "label": "Minimum Password Length",
+      "default": "4"
+    },
+    {
+      "name": "NEO4J_AUTH",
+      "label": "Neo4j Authentication",
+      "default": "neo4j/neo4j"
+    },
+    {
       "name": "NEO4J_dbms_memory_heap_initial__size",
       "label": "DBMS Memory Heap Initial Size",
       "default": "512m"
