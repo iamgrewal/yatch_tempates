@@ -1,0 +1,89 @@
+{
+  "type": 1,
+  "title": "Neo4j",
+  "name": "neo4j",
+  "description": "Neo4j is a highly scalable, robust native graph database.",
+  "logo": "https://raw.githubusercontent.com/neo4j/docker-neo4j-publish/5.15.0/logo.png",
+  "image": "neo4j:5.15.0",
+  "note": "Make sure to adjust the volumes to match your local directories.",
+  "categories": [
+    "Database"
+  ],
+  "platform": "linux",
+  "restart_policy": "unless-stopped",
+  "ports": [
+    "7474:7474/tcp",
+    "7687:7687/tcp"
+  ],
+  "network_mode": "bridge",
+  "volumes": [
+    {
+      "container": "/data",
+      "bind": "./data"
+    },
+    {
+      "container": "/plugins",
+      "bind": "./plugins"
+    },
+    {
+      "container": "/import",
+      "bind": "./import"
+    },
+    {
+      "container": "/logs",
+      "bind": "./logs"
+    }
+  ],
+  "env": [
+    {
+      "name": "NEO4J_apoc_export_file_enabled",
+      "label": "APOC Export File Enabled",
+      "default": "true"
+    },
+    {
+      "name": "NEO4J_apoc_import_file_enabled",
+      "label": "APOC Import File Enabled",
+      "default": "true"
+    },
+    {
+      "name": "NEO4J_dbms_security_procedures_unrestricted",
+      "label": "DBMS Security Procedures Unrestricted",
+      "default": "apoc.*,algo.*"
+    },
+    {
+      "name": "NEO4J_dbms_memory_heap_initial__size",
+      "label": "DBMS Memory Heap Initial Size",
+      "default": "512m"
+    },
+    {
+      "name": "NEO4J_dbms_memory_heap_max__size",
+      "label": "DBMS Memory Heap Max Size",
+      "default": "2G"
+    },
+    {
+      "name": "NEO4J_apoc_uuid_enabled",
+      "label": "APOC UUID Enabled",
+      "default": "true"
+    },
+    {
+      "name": "NEO4J_dbms_default__listen__address",
+      "label": "DBMS Default Listen Address",
+      "default": "0.0.0.0"
+    },
+    {
+      "name": "NEO4J_dbms_allow__upgrade",
+      "label": "DBMS Allow Upgrade",
+      "default": "true"
+    },
+    {
+      "name": "NEO4J_dbms_default__database",
+      "label": "DBMS Default Database",
+      "default": "neo4j"
+    },
+    {
+      "name": "NEO4J_AUTH",
+      "label": "Neo4j Authentication",
+      "default": "neo4j/test"
+    }
+  ]
+}
